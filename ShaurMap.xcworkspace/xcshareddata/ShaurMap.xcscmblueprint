@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0FB4F5FDEF7E3A9A4E377CB3D6FF567C4033603D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0FB4F5FDEF7E3A9A4E377CB3D6FF567C4033603D" : 9223372036854775807,
+    "1AAFED0E8224E677A575CF2EF4EDD82E4B0ABADB" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "13DE7230-DC11-405E-8D07-D73199F2ACAB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0FB4F5FDEF7E3A9A4E377CB3D6FF567C4033603D" : "ShaurMap\/",
+    "1AAFED0E8224E677A575CF2EF4EDD82E4B0ABADB" : "ShaurMap\/ShaurMap\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ShaurMap",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ShaurMap.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vovaseuruk\/kebabMap.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0FB4F5FDEF7E3A9A4E377CB3D6FF567C4033603D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vovaseuruk\/ShaurMap.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1AAFED0E8224E677A575CF2EF4EDD82E4B0ABADB"
+    }
+  ]
+}

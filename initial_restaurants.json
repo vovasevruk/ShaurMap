@@ -1,0 +1,54 @@
+{
+  "restaurants" : {
+    "miraj" : {
+      "name" : "Мираж",
+      "latitude" : "53.921455",
+      "longitude" : "27.579431",
+      "adressString" : "Кульман 5, Минск",
+      "opensAt" : "10",
+      "closesAt" : "6",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/miraj.jpg?alt=media&token=4a01c6ec-61d7-4999-a7cb-8294797a5eec",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/mirajSmall.jpg?alt=media&token=34daa85f-cd57-4176-9375-6699a1e2bbda"
+    },
+    "uMaji" : {
+      "name" : "У Майи",
+      "latitude" : "53.921455",
+      "longitude" : "27.579431",
+      "adressString" : "Кульман 5, Минск",
+      "opensAt" : "12",
+      "closesAt" : "24",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMaji.jpeg?alt=media&token=cb4f7447-2f30-42c7-8739-9914a5d7cce0",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMajiSmall.jpg?alt=media&token=86ef995d-6762-49d2-95e7-7dac724c35cc"
+    },
+    "DonerKing" : {
+      "name" : "Донер Кинг",
+      "latitude" : "53.910864",
+      "longitude" : "27.503661",
+      "adressString" : "Притыцкого 2б, Минск",
+      "opensAt" : "0",
+      "closesAt" : "24",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKing.jpeg?alt=media&token=16338b40-dda4-456c-b40c-e38ac47a4b6f",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKingSmall.jpg?alt=media&token=ff64d941-6ef5-4982-a184-23c95929be38"
+    },
+    "elBurrito" : {
+      "name" : "Эль-Буррито",
+      "latitude" : "53.921455",
+      "longitude" : "27.579431",
+      "adressString" : "Кульман 5, Минск",
+      "opensAt" : "10",
+      "closesAt" : "6",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurrito.jpeg?alt=media&token=ab0c9372-f271-4b89-b9d2-04e3eeec000e",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurritoSmall.jpg?alt=media&token=2564bb3b-f871-4e13-a0e3-ea068b743bf3"
+    },
+    "RoyalKebab" : {
+      "name" : "Роял Кебаб",
+      "latitude" : "53.905643",
+      "longitude" : "27.543779",
+      "adressString" : "Раковская 36, Минск",
+      "opensAt" : "11",
+      "closesAt" : "24",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebab.jpeg?alt=media&token=636164da-9047-4d59-baf6-d3c0a4c4e3ff",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebabSmall.jpg?alt=media&token=45d3dc47-d1b5-472e-87f5-9640d856318e"
+    }
+  }
+}
