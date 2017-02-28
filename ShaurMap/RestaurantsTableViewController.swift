@@ -16,6 +16,9 @@ class RestaurantsTableViewController: UITableViewController, LocationServiceDele
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
     private var restaurants = [Restaurant]()
+    private var _manager : RestaurantManager!
+    
+    let numberOfPreloadedCells = 6
     
     private struct Storyboard {
         static let restaurantCellIdentifier = "restaurantCell"
@@ -24,10 +27,11 @@ class RestaurantsTableViewController: UITableViewController, LocationServiceDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
         
-        let _manager = RestaurantManager()
+        _manager = RestaurantManager()
         _manager.delegate = self
-        _manager.fetchRestaurants()
+        _manager.fetchFirstRestaurants(with: numberOfPreloadedCells)
 
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -42,9 +46,6 @@ class RestaurantsTableViewController: UITableViewController, LocationServiceDele
     //MARK: RestaurantManagerDelegate
     func didReceive(restaurants: [Restaurant]) {
         self.restaurants = restaurants
-        for i in restaurants {
-            self.restaurants.append(i)
-        }
         tableView.reloadData()
     }
     
@@ -62,6 +63,11 @@ class RestaurantsTableViewController: UITableViewController, LocationServiceDele
     
     func tracingLocationDidFailtWith(error: NSError) {
         print(error)
+    }
+    
+    //MARK: UITableViewDelegate
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        _manager.fetchAllRestaurants()
     }
     
     // MARK: - Table view data source

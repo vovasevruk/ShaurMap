@@ -11,14 +11,19 @@ import Firebase
 import FirebaseDatabase
 
 class RestaurantManager {
-    var ref: FIRDatabaseReference!
     
-    var delegate : RestaurantManagerDelegate?
+    var ref =  FIRDatabase.database().reference(withPath: "restaurants")
 
-    func fetchRestaurants() {
-        ref = FIRDatabase.database().reference()
-        
-        ref.child("restaurants").observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
+    var delegate : RestaurantManagerDelegate?
+    
+    func fetchFirstRestaurants(with amout: Int) {
+        ref.queryLimited(toFirst: UInt(amout)).observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
+            self.delegate?.didReceive(restaurants: RestaurantBuilder.restaurantsFromJSON(with: snapshot.value as! NSDictionary))
+        })
+    }
+    
+    func fetchAllRestaurants() {
+        ref.observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
             self.delegate?.didReceive(restaurants: RestaurantBuilder.restaurantsFromJSON(with: snapshot.value as! NSDictionary))
         })
     }
