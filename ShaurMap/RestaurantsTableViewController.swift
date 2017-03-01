@@ -17,6 +17,7 @@ class RestaurantsTableViewController: UITableViewController, LocationServiceDele
 
     private var restaurants = [Restaurant]()
     private var _manager : RestaurantManager!
+    var _allRestaurantsAreFetched = false
     
     let numberOfPreloadedCells = 6
     
@@ -67,7 +68,10 @@ class RestaurantsTableViewController: UITableViewController, LocationServiceDele
     
     //MARK: UITableViewDelegate
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        _manager.fetchAllRestaurants()
+        if !_allRestaurantsAreFetched {
+            _manager.fetchAllRestaurants()
+            _allRestaurantsAreFetched = true 
+        }
     }
     
     // MARK: - Table view data source

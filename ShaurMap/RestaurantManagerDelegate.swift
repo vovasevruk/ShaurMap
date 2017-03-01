@@ -9,6 +9,7 @@
 import Foundation
 
 protocol RestaurantManagerDelegate {
+    var _allRestaurantsAreFetched: Bool {get set}
     func didReceive(restaurants: [Restaurant])
     func fetchingRestaurantsDidFail(with error: Error)
 }

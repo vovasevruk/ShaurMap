@@ -9,12 +9,10 @@
 import Foundation
 
 class RestaurantBuilder {
-    static func restaurantsFromJSON(with objectNotation: NSDictionary) -> [Restaurant] {
+    static func restaurantsFromJSON(with objectNotation: NSArray) -> [Restaurant] {
         var restaurants = [Restaurant]()
-        let restaurantsJSON = objectNotation
-        let restaurantKeys = restaurantsJSON.allKeys as! [String]
-        for key in restaurantKeys {
-            let restaurantJSON = restaurantsJSON.value(forKey: key) as! NSDictionary
+        for (_, value) in objectNotation.enumerated() {
+            let restaurantJSON = value as! NSDictionary
             let adressString =  restaurantJSON["adressString"] as! String
             let name = restaurantJSON["name"] as! String
             let closesAt = restaurantJSON["closesAt"] as! String
