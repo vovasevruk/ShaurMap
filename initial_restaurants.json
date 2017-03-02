@@ -2,8 +2,8 @@
   "restaurants" : [
     {
       "name" : "Мираж",
-      "latitude" : "53.921455",
-      "longitude" : "27.579431",
+      "latitude" : "53.921313",
+      "longitude" : "27.579884",
       "adressString" : "Кульман 5, Минск",
       "opensAt" : "10",
       "closesAt" : "6",
@@ -12,8 +12,8 @@
     },
     {
       "name" : "У Майи",
-      "latitude" : "53.921455",
-      "longitude" : "27.579431",
+      "latitude" : "53.921449",
+      "longitude" : "27.579413",
       "adressString" : "Кульман 5, Минск",
       "opensAt" : "12",
       "closesAt" : "24",
@@ -22,8 +22,8 @@
     },
     {
       "name" : "Донер Кинг",
-      "latitude" : "53.910864",
-      "longitude" : "27.503661",
+      "latitude" : "53.910648",
+      "longitude" : "27.503748",
       "adressString" : "Притыцкого 2б, Минск",
       "opensAt" : "0",
       "closesAt" : "24",
@@ -32,8 +32,8 @@
     },
     {
       "name" : "Эль-Буррито",
-      "latitude" : "53.921455",
-      "longitude" : "27.579431",
+      "latitude" : "53.921554",
+      "longitude" : "27.579160",
       "adressString" : "Кульман 5, Минск",
       "opensAt" : "10",
       "closesAt" : "6",
@@ -42,14 +42,15 @@
     },
     {
       "name" : "Роял Кебаб",
-      "latitude" : "53.905643",
-      "longitude" : "27.543779",
+      "latitude" : "53.905659",
+      "longitude" : "27.543866",
       "adressString" : "Раковская 36, Минск",
       "opensAt" : "11",
       "closesAt" : "24",
       "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebab.jpeg?alt=media&token=636164da-9047-4d59-baf6-d3c0a4c4e3ff",
       "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebabSmall.jpg?alt=media&token=45d3dc47-d1b5-472e-87f5-9640d856318e"
     },
+
     {
       "name" : "Мираж",
       "latitude" : "53.921455",
@@ -142,8 +143,8 @@
     },
     {
       "name" : "Роял Кебаб",
-      "latitude" : "53.905643",
-      "longitude" : "27.543779",
+      "latitude" : "53.905659",
+      "longitude" : "27.543866",
       "adressString" : "Раковская 36, Минск",
       "opensAt" : "11",
       "closesAt" : "24",
