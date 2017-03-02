@@ -18,17 +18,6 @@ class Restaurant {
   let mainPicture : URL
   var smallPicture : URL
   
-  //    init(name: String, latitude: Double, longitude: Double, adressString: String, opensAt: Int, closesAt: Int, mainPicture: UIImage) {
-  //        self.name = name
-  //        self.adressString = adressString
-  //        self.openHour = opensAt
-  //        self.closeHour = closesAt
-  //        self.mainPicture = mainPicture
-  //        self.smallPicture = self.mainPicture
-  //        self.adress = CLLocation(latitude: latitude, longitude: longitude)
-  //        self.smallPicture = resizeImage(image: mainPicture)!
-  //    }
-  
   init(name: String, latitude: Double, longitude: Double, adressString: String, opensAt: Int, closesAt: Int, mainPictureURL: String, smallPicture: String) {
     self.name = name
     self.adressString = adressString

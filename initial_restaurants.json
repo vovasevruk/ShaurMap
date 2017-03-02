@@ -52,10 +52,10 @@
     },
 
     {
-      "name" : "Мираж",
-      "latitude" : "53.921455",
-      "longitude" : "27.579431",
-      "adressString" : "Кульман 5, Минск",
+      "name" : "Экспресс Шаурма",
+      "latitude" : "53.921019",
+      "longitude" : "27.580455",
+      "adressString" : "Кульман 9, Минск",
       "opensAt" : "10",
       "closesAt" : "6",
       "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/miraj.jpg?alt=media&token=4a01c6ec-61d7-4999-a7cb-8294797a5eec",
