@@ -84,7 +84,7 @@ class MapTasks {
     }
     
     let distanceInKilometers: Double = Double(totalDistanceInMeters / 1000)
-    totalDistance = "Total Distance: \(distanceInKilometers) Km"
+    totalDistance = "\n\nTotal Distance: \(distanceInKilometers) Km"
     
     let mins = totalDurationInSeconds / 60
     let hours = mins / 60

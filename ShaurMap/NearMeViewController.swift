@@ -29,6 +29,8 @@ class NearMeViewController: UIViewController {
     if let restaurantList = Shared.sharedInstance.restaurants { restaurants = restaurantList }
     loadMarkers()
     
+    if !Shared.sharedInstance.allRestaurantsAreFetched { Shared.loadAllRestaurants() }
+    
     if self.revealViewController() != nil {
       menuButton.target = self.revealViewController()
       menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -43,32 +45,20 @@ class NearMeViewController: UIViewController {
   }
   
   func deleteOldRouteAndClearMarker() {
-    self.mapTasks.routePolyline?.map =  nil
-    self.lastSelectedMarker?.icon = GMSMarker.markerImage(with: .black)
-    self.lastSelectedMarker = nil
+    lastSelectedMarker?.icon = GMSMarker.markerImage(with: .black)
+    lastSelectedMarker = nil
   }
   
   func drawRoute() {
     let route = self.mapTasks.overviewPolyline["points" as NSObject] as! String
     
     let path: GMSPath = GMSPath(fromEncodedPath: route)!
-    self.mapTasks.routePolyline = GMSPolyline(path: path)
-    self.mapTasks.routePolyline?.map = (view as! GMSMapView)
+    mapTasks.routePolyline = GMSPolyline(path: path)
+    mapTasks.routePolyline?.map = (view as! GMSMapView)
   }
   
   func displayRouteInfo() {
     print("\(self.mapTasks.totalDistance) \n \(self.mapTasks.totalDuration)")
-  }
-  
-  //MARK: Notifications
-  @objc private func getUpdatedRestaurants() {
-    restaurants = Shared.sharedInstance.restaurants!
-    (view as! GMSMapView!).clear()
-    loadMarkers()
-  }
-  
-  deinit {
-    NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: Shared.sharedInstance.restaurantsDidUpdateNotification), object: nil)
   }
   
   func createFindRouteButton() {
@@ -83,20 +73,41 @@ class NearMeViewController: UIViewController {
   }
   
   func createRoute() {
+//    if (UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL)) {
+//      UIApplication.shared.open(URL(string:"comgooglemaps://?saddr=&daddr=\((selectedMarker?.userData as! Restaurant).adress.coordinate.latitude),\((selectedMarker?.userData as! Restaurant).adress.coordinate.longitude)&directionsmode=driving")!, options: [:], completionHandler: nil)
+//    } else {
+//      let latitude = (selectedMarker?.userData as! Restaurant).adress.coordinate.latitude
+//      let longitude = (selectedMarker?.userData as! Restaurant).adress.coordinate.longitude
+//      //UIApplication.shared.open(URL(string:"https://www.google.com/maps/dir/@\(latitude),\(longitude),17z/data=!4m3!1m2!3m1!2zNTPCsDU1JzE3LjYiTiAyN8KwMzQnNDUuMCJF")!, options: [:], completionHandler: nil)
+//      UIApplication.shared.open(URL(string: "https://maps.google.com/?q=@\(latitude),\(longitude)")!, options: [:], completionHandler: nil)
+//    }
+    
     if self.mapTasks.routePolyline != nil {
       deleteOldRouteAndClearMarker()
     }
     
     let destination = (selectedMarker!.userData as! Restaurant).adress.coordinate
-    self.mapTasks.getDirections(origin: userLocation.coordinate, destination: destination,
+    mapTasks.getDirections(origin: userLocation.coordinate, destination: destination,
                                 waypoints: nil, travelMode: nil, completionHandler: { (status, success) -> Void in
       if success {
+        self.mapTasks.routePolyline?.map = nil
         self.selectedMarker!.icon = GMSMarker.markerImage(with: .red)
         self.lastSelectedMarker = self.selectedMarker!
         self.drawRoute()
         self.displayRouteInfo()
       } else { print(status) }
     })
+  }
+
+  //MARK: Notifications
+  @objc private func getUpdatedRestaurants() {
+    restaurants = Shared.sharedInstance.restaurants!
+    (view as! GMSMapView!).clear()
+    loadMarkers()
+  }
+  
+  deinit {
+    NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: Shared.sharedInstance.restaurantsDidUpdateNotification), object: nil)
   }
   
   //MARK: Load MapView

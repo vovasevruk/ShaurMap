@@ -1,145 +1,124 @@
 {
   "restaurants" : [
-    {
-      "name" : "Мираж",
-      "latitude" : "53.921313",
-      "longitude" : "27.579884",
-      "adressString" : "Кульман 5, Минск",
-      "opensAt" : "10",
-      "closesAt" : "6",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/miraj.jpg?alt=media&token=4a01c6ec-61d7-4999-a7cb-8294797a5eec",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/mirajSmall.jpg?alt=media&token=34daa85f-cd57-4176-9375-6699a1e2bbda"
-    },
-    {
-      "name" : "У Майи",
-      "latitude" : "53.921449",
-      "longitude" : "27.579413",
-      "adressString" : "Кульман 5, Минск",
-      "opensAt" : "12",
+  	{
+      "name" : "My Dear Kebab",
+      "latitude" : "53.903523",
+      "longitude" : "27.551717",
+      "adressString" : "Комсомольская 3, Минск",
+      "opensAt" : "9",
       "closesAt" : "24",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMaji.jpeg?alt=media&token=cb4f7447-2f30-42c7-8739-9914a5d7cce0",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMajiSmall.jpg?alt=media&token=86ef995d-6762-49d2-95e7-7dac724c35cc"
-    },
-    {
-      "name" : "Донер Кинг",
-      "latitude" : "53.910648",
-      "longitude" : "27.503748",
-      "adressString" : "Притыцкого 2б, Минск",
-      "opensAt" : "0",
-      "closesAt" : "24",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKing.jpeg?alt=media&token=16338b40-dda4-456c-b40c-e38ac47a4b6f",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKingSmall.jpg?alt=media&token=ff64d941-6ef5-4982-a184-23c95929be38"
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/myDearKebab.jpg?alt=media&token=4dc65c6d-325f-4220-88f9-81563b085076",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/myDearKebabSquare.jpg?alt=media&token=513b4d76-fac3-4b95-86cb-0fe76561eb8a"
     },
     {
       "name" : "Эль-Буррито",
       "latitude" : "53.921554",
       "longitude" : "27.579160",
       "adressString" : "Кульман 5, Минск",
-      "opensAt" : "10",
-      "closesAt" : "6",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurrito.jpeg?alt=media&token=716b3db1-d072-43df-a404-31ad1c91cdf0",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurritoSmall.jpg?alt=media&token=2564bb3b-f871-4e13-a0e3-ea068b743bf3"
-    },
-    {
-      "name" : "Роял Кебаб",
-      "latitude" : "53.905659",
-      "longitude" : "27.543866",
-      "adressString" : "Раковская 36, Минск",
-      "opensAt" : "11",
-      "closesAt" : "24",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebab.jpeg?alt=media&token=636164da-9047-4d59-baf6-d3c0a4c4e3ff",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebabSmall.jpg?alt=media&token=45d3dc47-d1b5-472e-87f5-9640d856318e"
-    },
-
-    {
-      "name" : "Экспресс Шаурма",
-      "latitude" : "53.921019",
-      "longitude" : "27.580455",
-      "adressString" : "Кульман 9, Минск",
-      "opensAt" : "10",
-      "closesAt" : "6",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/miraj.jpg?alt=media&token=4a01c6ec-61d7-4999-a7cb-8294797a5eec",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/mirajSmall.jpg?alt=media&token=34daa85f-cd57-4176-9375-6699a1e2bbda"
-    },
-    {
-      "name" : "У Майи",
-      "latitude" : "53.921455",
-      "longitude" : "27.579431",
-      "adressString" : "Кульман 5, Минск",
-      "opensAt" : "12",
-      "closesAt" : "24",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMaji.jpeg?alt=media&token=cb4f7447-2f30-42c7-8739-9914a5d7cce0",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMajiSmall.jpg?alt=media&token=86ef995d-6762-49d2-95e7-7dac724c35cc"
-    },
-    {
-      "name" : "Донер Кинг",
-      "latitude" : "53.910864",
-      "longitude" : "27.503661",
-      "adressString" : "Притыцкого 2б, Минск",
-      "opensAt" : "0",
-      "closesAt" : "24",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKing.jpeg?alt=media&token=16338b40-dda4-456c-b40c-e38ac47a4b6f",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKingSmall.jpg?alt=media&token=ff64d941-6ef5-4982-a184-23c95929be38"
-    },
-    {
-      "name" : "Эль-Буррито",
-      "latitude" : "53.921455",
-      "longitude" : "27.579431",
-      "adressString" : "Кульман 5, Минск",
-      "opensAt" : "10",
-      "closesAt" : "6",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurrito.jpeg?alt=media&token=716b3db1-d072-43df-a404-31ad1c91cdf0",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurritoSmall.jpg?alt=media&token=2564bb3b-f871-4e13-a0e3-ea068b743bf3"
-    },
-    {
-      "name" : "Роял Кебаб",
-      "latitude" : "53.905643",
-      "longitude" : "27.543779",
-      "adressString" : "Раковская 36, Минск",
-      "opensAt" : "11",
-      "closesAt" : "24",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebab.jpeg?alt=media&token=636164da-9047-4d59-baf6-d3c0a4c4e3ff",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebabSmall.jpg?alt=media&token=45d3dc47-d1b5-472e-87f5-9640d856318e"
+      "opensAt" : "8",
+      "closesAt" : "4",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurrito.jpg?alt=media&token=24eb647c-0b6b-4604-a5be-822080221712",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurritoSquare.jpg?alt=media&token=cfe76906-585d-403f-ab97-1b9bcdd60832"
     },
     {
       "name" : "Мираж",
-      "latitude" : "53.921455",
-      "longitude" : "27.579431",
-      "adressString" : "Кульман 5, Минск",
-      "opensAt" : "10",
-      "closesAt" : "6",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/miraj.jpg?alt=media&token=4a01c6ec-61d7-4999-a7cb-8294797a5eec",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/mirajSmall.jpg?alt=media&token=34daa85f-cd57-4176-9375-6699a1e2bbda"
+      "latitude" : "53.921313",
+      "longitude" : "27.579884",
+      "adressString" : "Кульман 9, Минск",
+      "opensAt" : "00",
+      "closesAt" : "24",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/Miraj.jpg?alt=media&token=cecda954-5d89-4736-936d-c27e80afd80a",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/MirajSquare.jpg?alt=media&token=04d5ce83-0579-49e9-937a-d9583c07c201"
     },
     {
       "name" : "У Майи",
-      "latitude" : "53.921455",
-      "longitude" : "27.579431",
+      "latitude" : "53.921449",
+      "longitude" : "27.579413",
+      "adressString" : "Кульман 9, Минск",
+      "opensAt" : "10",
+      "closesAt" : "4",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMaji.jpg?alt=media&token=4688697f-56cc-46f3-b11d-3f0e22aceea4",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMajiSuqare.jpg?alt=media&token=db534d40-9509-4cba-837d-0e8a499dbca0"
+    },
+    {
+      "name" : "Мир Али",
+      "latitude" : "53.920115",
+      "longitude" : "27.581266",
+      "adressString" : "Кульман 5Б, Минск",
+      "opensAt" : "10",
+      "closesAt" : "1",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/MirAli.jpg?alt=media&token=bdadf64c-cef6-4dd0-8a25-954b8bee6c94",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/MirAliSquare.jpg?alt=media&token=1765f59f-ff88-4546-92b7-eb6436623f3b"
+    },
+    {
+      "name" : "Эксперсс",
+      "latitude" : "53.921020",
+      "longitude" : "27.580453",
+      "adressString" : "Кульман 9, Минск",
+      "opensAt" : "10",
+      "closesAt" : "6",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/cafeExpress2.jpg?alt=media&token=d7c59941-2174-416b-a5aa-9f69bca25c9d",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/cafeExpress2Square.jpg?alt=media&token=76635da3-3e91-4416-bf09-70146f960b89"
+    },
+  	{
+      "name" : "Анталия",
+      "latitude" : "53.919292",
+      "longitude" : "27.580544",
+      "adressString" : "Кульман 5А, Минск",
+      "opensAt" : "10",
+      "closesAt" : "19",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/cafeAntalia.jpg?alt=media&token=403de0f4-bf36-440c-b060-8a49ba3bb0b7",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/cafeAntaliaSquare.jpg?alt=media&token=1e483b0e-d673-49c2-a750-aa32cbcf43af"
+    },
+    {
+      "name" : "Дёнер и Кебаб",
+      "latitude" : "53.920618",
+      "longitude" : "27.580464",
       "adressString" : "Кульман 5, Минск",
-      "opensAt" : "12",
-      "closesAt" : "24",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMaji.jpeg?alt=media&token=cb4f7447-2f30-42c7-8739-9914a5d7cce0",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/uMajiSmall.jpg?alt=media&token=86ef995d-6762-49d2-95e7-7dac724c35cc"
+      "opensAt" : "9",
+      "closesAt" : "4",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/DenerKebab.jpg?alt=media&token=19818c51-f095-49fd-84de-e489fc5e225d",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/DenerKebabSuare.jpg?alt=media&token=24fdebd7-3d82-43d9-95ea-9d1725906e4d"
+    },
+    {
+      "name" : "Донер Кебаб",
+      "latitude" : "53.919824",
+      "longitude" : "27.581496",
+      "adressString" : "Кульман 5, Минск",
+      "opensAt" : "10",
+      "closesAt" : "19",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/DonerKebab.jpg?alt=media&token=d20c973e-f5bf-4c25-a222-b34f96a109e0",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/DonerKebabSquare.jpg?alt=media&token=5a1a74e2-3d97-4844-bad0-04c7beb54b82"
+    },
+    {
+      "name" : "Кебаб Хаус",
+      "latitude" : "53.921260",
+      "longitude" : "27.579814",
+      "adressString" : "Кульман 9, Минск",
+      "opensAt" : "10",
+      "closesAt" : "6",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/KebabHouse.jpg?alt=media&token=e60e01da-ff05-448c-8011-2cfab78abcdd",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/KebabHouseSquare.jpg?alt=media&token=251b09dc-016a-49a9-bf0e-b0e12b8362b0"
+    },
+    {
+      "name" : "Эксперсс",
+      "latitude" : "53.919497",
+      "longitude" : "27.581137",
+      "adressString" : "Кульман 5А, Минск",
+      "opensAt" : "10",
+      "closesAt" : "1",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/cafeExpress.jpg?alt=media&token=20e7047f-fa1d-4048-95fa-82984586490f",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/cafeExpressSquare.jpg?alt=media&token=27045282-1a90-4b94-8c0e-130b05276a3a"
     },
     {
       "name" : "Донер Кинг",
-      "latitude" : "53.910864",
-      "longitude" : "27.503661",
+      "latitude" : "53.910648",
+      "longitude" : "27.503748",
       "adressString" : "Притыцкого 2б, Минск",
-      "opensAt" : "0",
+      "opensAt" : "00",
       "closesAt" : "24",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKing.jpeg?alt=media&token=16338b40-dda4-456c-b40c-e38ac47a4b6f",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKingSmall.jpg?alt=media&token=ff64d941-6ef5-4982-a184-23c95929be38"
-    },
-    {
-      "name" : "Эль-Буррито",
-      "latitude" : "53.921455",
-      "longitude" : "27.579431",
-      "adressString" : "Кульман 5, Минск",
-      "opensAt" : "10",
-      "closesAt" : "6",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurrito.jpeg?alt=media&token=716b3db1-d072-43df-a404-31ad1c91cdf0",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurritoSmall.jpg?alt=media&token=2564bb3b-f871-4e13-a0e3-ea068b743bf3"
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKing.jpeg?alt=media&token=a6319c3a-656f-4aff-b225-a9fd1d24e2d9",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/donerKingSqaure.jpg?alt=media&token=219faba2-f3a6-4180-8598-0eff995a41c6"
     },
     {
       "name" : "Роял Кебаб",
@@ -148,8 +127,18 @@
       "adressString" : "Раковская 36, Минск",
       "opensAt" : "11",
       "closesAt" : "24",
-      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebab.jpeg?alt=media&token=636164da-9047-4d59-baf6-d3c0a4c4e3ff",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebabSmall.jpg?alt=media&token=45d3dc47-d1b5-472e-87f5-9640d856318e"
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebab.jpeg?alt=media&token=9e903e87-08f2-4945-8eb4-d2ec35eb0f2a",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/royalKebabSquare.jpg?alt=media&token=d85d0c61-f77f-4746-bde4-ecb6349c9dd7"
+    },
+    {
+      "name" : "WineBeer",
+      "latitude" : "53.920852",
+      "longitude" : "27.580567",
+      "adressString" : "Кульман 9, Минск",
+      "opensAt" : "10",
+      "closesAt" : "1",
+      "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/myDearKebab.jpg?alt=media&token=4dc65c6d-325f-4220-88f9-81563b085076",
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/WineBeerSquare.jpg?alt=media&token=62da5f91-a25d-4361-88af-11ac08346008"
     }
   ]
 }
