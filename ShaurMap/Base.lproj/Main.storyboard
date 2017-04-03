@@ -428,6 +428,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="ebg-jB-eCs" id="pzZ-SH-s87"/>
+                        <segue destination="8vl-qE-FLY" kind="show" identifier="Restaurant Info" id="jvu-KU-QMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZM-gs-Pid" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -599,5 +600,6 @@
         <segue reference="aCb-IO-Vhy"/>
         <segue reference="CZP-Rp-kgB"/>
         <segue reference="vhq-FC-t8c"/>
+        <segue reference="jvu-KU-QMc"/>
     </inferredMetricsTieBreakers>
 </document>

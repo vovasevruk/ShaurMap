@@ -39,12 +39,12 @@ class MapTasks {
       var travelModeString = ""
       
       switch travel.rawValue {
-        case TravelModes.walking.rawValue:
-          travelModeString = "walking"
-        case TravelModes.bicycling.rawValue:
-          travelModeString = "bicycling"
-        default:
-          travelModeString = "driving"
+      case TravelModes.walking.rawValue:
+        travelModeString = "walking"
+      case TravelModes.bicycling.rawValue:
+        travelModeString = "bicycling"
+      default:
+        travelModeString = "driving"
       }
       directionsURLString += "&mode=" + travelModeString
     }
