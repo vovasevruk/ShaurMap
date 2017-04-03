@@ -18,7 +18,13 @@
       "opensAt" : "8",
       "closesAt" : "4",
       "mainPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurrito.jpg?alt=media&token=24eb647c-0b6b-4604-a5be-822080221712",
-      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurritoSquare.jpg?alt=media&token=cfe76906-585d-403f-ab97-1b9bcdd60832"
+      "smallPictureURL" : "https://firebasestorage.googleapis.com/v0/b/shaurmap-1479555645984.appspot.com/o/elBurritoSquare.jpg?alt=media&token=cfe76906-585d-403f-ab97-1b9bcdd60832",
+      "menu" : {
+      	"mini" : "5",
+      	"standard" : "7",
+      	"big" : "8",
+      	"king" : "12"
+      }
     },
     {
       "name" : "Мираж",

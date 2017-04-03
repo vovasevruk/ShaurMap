@@ -43,7 +43,7 @@ class RestaurantViewController: UIViewController {
     setupBorderAround(button: share)
     
     let camera = GMSCameraPosition.camera(withTarget: restaurant.adress.coordinate, zoom: 14)
-    let mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 470, width: 375, height: 140), camera: camera)
+    let mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 465, width: 375, height: 130), camera: camera)
     self.mapView = mapView
     view.addSubview(mapView)
     
@@ -51,6 +51,8 @@ class RestaurantViewController: UIViewController {
     marker.position = restaurant.adress.coordinate
     marker.title = restaurant.name
     marker.map = mapView
+    
+    print(restaurant.menu)
   }
   
   override func viewWillDisappear(_ animated: Bool) {

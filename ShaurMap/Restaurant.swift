@@ -17,8 +17,9 @@ class Restaurant {
   let closeHour : Int
   let mainPicture : URL
   var smallPicture : URL
+  var menu : [String:Double]
   
-  init(name: String, latitude: Double, longitude: Double, adressString: String, opensAt: Int, closesAt: Int, mainPictureURL: String, smallPicture: String) {
+  init(name: String, latitude: Double, longitude: Double, adressString: String, opensAt: Int, closesAt: Int, mainPictureURL: String, smallPicture: String, menu : [String:String]?) {
     self.name = name
     self.adressString = adressString
     self.openHour = opensAt
@@ -26,7 +27,22 @@ class Restaurant {
     self.adress = CLLocation(latitude: latitude, longitude: longitude)
     self.mainPicture = URL(string: mainPictureURL)!
     self.smallPicture = URL(string: smallPicture)!
+    var _menu = [String:Double]()
+    for label in Restaurant.labels.keys {
+      if let key = menu?[label] {
+        _menu[Restaurant.labels[label]!] = Double(key)
+      }
+    }
+    self.menu = _menu
   }
+  
+  static let labels : [String: String] = [
+    "mini" : "Мини",
+    "standard" : "Стандартная",
+    "big" : "Большая",
+    "mini-king" : "Королевская мини",
+    "king" : "Королевская"
+  ]
   
   private func resizeImage(image: UIImage) -> UIImage? {
     let newSize = 90
