@@ -16,10 +16,12 @@ class Restaurant {
   let openHour : Int
   let closeHour : Int
   let mainPicture : URL
-  var smallPicture : URL
-  var menu : [String:Double]
+  let smallPicture : URL
+  let menu : [String:Double]
+  var rating : Double
+  var voted : Int
   
-  init(name: String, latitude: Double, longitude: Double, adressString: String, opensAt: Int, closesAt: Int, mainPictureURL: String, smallPicture: String, menu : [String:String]?) {
+  init(name: String, latitude: Double, longitude: Double, adressString: String, opensAt: Int, closesAt: Int, mainPictureURL: String, smallPicture: String, menu : [String:String]?, rating: Double, voted: Int) {
     self.name = name
     self.adressString = adressString
     self.openHour = opensAt
@@ -34,6 +36,8 @@ class Restaurant {
       }
     }
     self.menu = _menu
+    self.rating = rating
+    self.voted = voted
   }
   
   static let labels : [String: String] = [

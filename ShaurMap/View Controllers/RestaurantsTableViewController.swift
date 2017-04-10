@@ -31,6 +31,8 @@ class RestaurantsTableViewController: UITableViewController {
       restaurants = restaurantList
     }
     
+    createFormatter()
+    
     if self.revealViewController() != nil {
       menuButton.target = self.revealViewController()
       menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -95,6 +97,14 @@ class RestaurantsTableViewController: UITableViewController {
   }
   
   //MARK: Distance func
+  var formatter: NumberFormatter!
+  private func createFormatter() {
+    formatter = NumberFormatter()
+    formatter.numberStyle = .decimal
+    formatter.maximumFractionDigits = 1
+  }
+  
+  
   func getDistanceFrom(restaurant: Restaurant) -> String{
     if  userLocation != nil{
       let distanceToCafeInKM = userLocation!.distance(from: restaurant.adress) / 1000
@@ -103,9 +113,6 @@ class RestaurantsTableViewController: UITableViewController {
       } else if distanceToCafeInKM < 0.1{
         return "< 100 метров"
       } else{
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 1
         return formatter.string(from: NSNumber(value: distanceToCafeInKM))! + " км"
       }
     } else {return "неизвестно"}
