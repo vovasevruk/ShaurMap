@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		618EE2EFFC07E7EBF955A2E6 /* libPods-ShaurMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBE24C53DF03AF32998F208 /* libPods-ShaurMap.a */; };
 		80013B371E5EE0A30094D3FC /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80013B361E5EE0A30094D3FC /* RestaurantViewController.swift */; };
 		800AAF121E6741B300085461 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800AAF111E6741B300085461 /* Shared.swift */; };
 		804C47551E66BA0A0015DB8C /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C47541E66BA0A0015DB8C /* NearMeViewController.swift */; };
@@ -28,6 +27,7 @@
 		80FC844F1E9B76CB00CD24BC /* RestaurantBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC844C1E9B76CB00CD24BC /* RestaurantBuilder.swift */; };
 		80FC84501E9B76CB00CD24BC /* RestaurantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC844D1E9B76CB00CD24BC /* RestaurantManager.swift */; };
 		80FC84511E9B76CB00CD24BC /* RestaurantManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC844E1E9B76CB00CD24BC /* RestaurantManagerDelegate.swift */; };
+		F19D4CCE820EF9A0509D151C /* Pods_ShaurMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388C39E54C15B39F87480222 /* Pods_ShaurMap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1FBE24C53DF03AF32998F208 /* libPods-ShaurMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShaurMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		388C39E54C15B39F87480222 /* Pods_ShaurMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShaurMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80013B361E5EE0A30094D3FC /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		800AAF111E6741B300085461 /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
-		802200FD1E5E16690020EDAE /* ShaurMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShaurMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		804C47541E66BA0A0015DB8C /* NearMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
 		805C56A61E9AA31A007E0926 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8065D8C41E69B457005C9DEC /* MapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTasks.swift; sourceTree = "<group>"; };
@@ -76,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				618EE2EFFC07E7EBF955A2E6 /* libPods-ShaurMap.a in Frameworks */,
+				F19D4CCE820EF9A0509D151C /* Pods_ShaurMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +159,6 @@
 		80A8BEF51E5B00E600F1CAE3 = {
 			isa = PBXGroup;
 			children = (
-				80F18F181E5C2F2100D0BB39 /* SWRevealViewController */,
 				80A8BF001E5B00E600F1CAE3 /* ShaurMap */,
 				80A8BF181E5B00E600F1CAE3 /* ShaurMapTests */,
 				80A8BEFF1E5B00E600F1CAE3 /* Products */,
@@ -204,18 +202,10 @@
 			path = ShaurMapTests;
 			sourceTree = "<group>";
 		};
-		80F18F181E5C2F2100D0BB39 /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				802200FD1E5E16690020EDAE /* ShaurMap-Bridging-Header.h */,
-			);
-			name = SWRevealViewController;
-			sourceTree = "<group>";
-		};
 		B44016876EC257547E60E231 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1FBE24C53DF03AF32998F208 /* libPods-ShaurMap.a */,
+				388C39E54C15B39F87480222 /* Pods_ShaurMap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -539,7 +529,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vovaseuruk.ShaurMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ShaurMap-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -558,7 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vovaseuruk.ShaurMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ShaurMap-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

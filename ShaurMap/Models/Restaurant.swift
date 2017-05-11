@@ -10,18 +10,20 @@ import Foundation
 import CoreLocation
 
 class Restaurant {
-  let name : String
-  let adress : CLLocation
-  let adressString : String
-  let openHour : Int
-  let closeHour : Int
-  let mainPicture : URL
-  let smallPicture : URL
-  let menu : [String:Double]
-  var rating : Double
-  var voted : Int
+  let name: String
+  let id: Int
+  let adress: CLLocation
+  let adressString: String
+  let openHour: Int
+  let closeHour: Int
+  let mainPicture: URL
+  let smallPicture: URL
+  let menu: [String:Double]
+  var rating: Double
+  var voted: Int
   
-  init(name: String, latitude: Double, longitude: Double, adressString: String, opensAt: Int, closesAt: Int, mainPictureURL: String, smallPicture: String, menu : [String:String]?, rating: Double, voted: Int) {
+  
+  init(name: String, id: Int, latitude: Double, longitude: Double, adressString: String, opensAt: Int, closesAt: Int, mainPictureURL: String, smallPicture: String, menu : [String:String]?, rating: Double, voted: Int) {
     self.name = name
     self.adressString = adressString
     self.openHour = opensAt
@@ -38,6 +40,7 @@ class Restaurant {
     self.menu = _menu
     self.rating = rating
     self.voted = voted
+    self.id = id
   }
   
   static let labels : [String: String] = [
@@ -47,15 +50,4 @@ class Restaurant {
     "mini-king" : "Королевская мини",
     "king" : "Королевская"
   ]
-  
-  private func resizeImage(image: UIImage) -> UIImage? {
-    let newSize = 90
-    UIGraphicsBeginImageContext(CGSize(width: newSize, height: newSize))
-    image.draw(in: CGRect(x: 0, y: 0, width: newSize, height: newSize))
-    
-    let newImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-    
-    return newImage
-  }
 }

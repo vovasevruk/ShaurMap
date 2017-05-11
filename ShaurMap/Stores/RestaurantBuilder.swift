@@ -12,8 +12,9 @@ class RestaurantBuilder {
   static func restaurantsFromJSON(with objectNotation: NSArray) -> [Restaurant] {
     var restaurants = [Restaurant]()
     for (_, value) in objectNotation.enumerated() {
-      let restaurantJSON = value as! NSDictionary
+      if let restaurantJSON = value as? NSDictionary {
       let adressString =  restaurantJSON["adressString"] as! String
+      let id = restaurantJSON["id"] as! String
       let name = restaurantJSON["name"] as! String
       let closesAt = restaurantJSON["closesAt"] as! String
       let opensAt = restaurantJSON["opensAt"] as! String
@@ -35,8 +36,9 @@ class RestaurantBuilder {
       }
       
       
-      let restaurant = Restaurant(name: name, latitude: Double(latitude)!, longitude: Double(longitude)!, adressString: adressString, opensAt: Int(opensAt)!, closesAt: Int(closesAt)!, mainPictureURL: mainPictureURL, smallPicture: smallPictureURL, menu: menu, rating: rating, voted: voted)
+      let restaurant = Restaurant(name: name, id: Int(id)!, latitude: Double(latitude)!, longitude: Double(longitude)!, adressString: adressString, opensAt: Int(opensAt)!, closesAt: Int(closesAt)!, mainPictureURL: mainPictureURL, smallPicture: smallPictureURL, menu: menu, rating: rating, voted: voted)
       restaurants.append(restaurant)
+      }
     }
     print("appended")
     return restaurants

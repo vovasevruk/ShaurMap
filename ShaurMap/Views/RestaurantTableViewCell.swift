@@ -14,16 +14,23 @@ class RestaurantTableViewCell: UITableViewCell {
   @IBOutlet weak var adress: UILabel!
   @IBOutlet weak var businessHours: UILabel!
   @IBOutlet weak var distance: UILabel!
+  var id: String!
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    // Initialization code
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    restaurantImageView.image = nil
+    name.text = ""
+    adress.text = ""
+    businessHours.text = ""
+    distance.text = ""
+    id = ""
   }
   
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-    
-    // Configure the view for the selected state
+  func configure(with restaurant: Restaurant) {
+    self.name.text = restaurant.name
+    self.id = String(describing: restaurant.smallPicture)
+    self.businessHours.text = "Работает с \(restaurant.openHour):00 до \(restaurant.closeHour):00"
+    self.adress.text = restaurant.adressString
+    self.restaurantImageView.sd_setImage(with: URL(string: String(describing: restaurant.smallPicture)), placeholderImage: nil)
   }
-  
 }

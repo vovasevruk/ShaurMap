@@ -11,6 +11,8 @@ import CoreLocation
 import FirebaseDatabase
 import Firebase
 import Foundation
+import SWRevealViewController
+import SDWebImage
 
 class RestaurantsTableViewController: UITableViewController {
   @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -77,17 +79,8 @@ class RestaurantsTableViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.restaurantCellIdentifier, for: indexPath) as! RestaurantTableViewCell
     
     let restaurant = restaurants[indexPath.row]
-    
-    cell.name.text = restaurant.name
-    cell.businessHours.text = "Работает с \(restaurant.openHour):00 до \(restaurant.closeHour):00"
+    cell.configure(with: restaurant)
     cell.distance.text = getDistanceFrom(restaurant: restaurant)
-    cell.adress.text = restaurant.adressString
-    DispatchQueue.global().async {
-      let data = try? Data(contentsOf: restaurant.smallPicture)
-      DispatchQueue.main.async {
-        cell.restaurantImageView.image = UIImage(data: data!)!
-      }
-    }
     
     return cell
   }

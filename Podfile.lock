@@ -29,12 +29,16 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - GoogleMaps
+  - SDWebImage
   - SWRevealViewController
 
 SPEC CHECKSUMS:
@@ -47,8 +51,9 @@ SPEC CHECKSUMS:
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: c962f085655e9e850c6831bcd5580dc9245b1a14
+PODFILE CHECKSUM: b4eb76e81a1ab898d5321f86f5d7648cd464e8ec
 
 COCOAPODS: 1.2.0

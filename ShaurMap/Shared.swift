@@ -17,6 +17,7 @@ class Shared: RestaurantManagerDelegate {
   let restaurantsDidUpdateNotification = "restaurantsDidUpdateNotification"
   private(set) var restaurants: [Restaurant]? {
     didSet{
+      print("rests updated")
       NotificationCenter.default.post(name: Notification.Name(rawValue: self.restaurantsDidUpdateNotification), object: nil)
     }
   }
@@ -41,6 +42,7 @@ class Shared: RestaurantManagerDelegate {
   }
   
   //MARK: RestaurantManagerDelegate
+  
   func didReceive(restaurants: [Restaurant]) {
     self.restaurants = restaurants
   }

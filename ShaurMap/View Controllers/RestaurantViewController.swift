@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import SWRevealViewController
 
 class RestaurantViewController: UIViewController {
   @IBOutlet weak var scrollView: UIScrollView!
@@ -18,15 +19,15 @@ class RestaurantViewController: UIViewController {
   @IBOutlet weak var reviewsAndBeenThere: UILabel!
   @IBOutlet weak var beenThere: UIButton!
   @IBOutlet weak var rate: UIButton!
-  @IBOutlet weak var ratingLabel: UILabel!
+  @IBOutlet weak var ratingLabel: UILabel! { didSet{ print("lol") } }
   weak var commentsView : UIView!
   var menuView : UIView!
   var blurEffectView : UIVisualEffectView!
   var ratingView : UIView!
   var rateButton: UIButton!
+  var mapView : UIView!
   
   var restaurant : Restaurant!
-  var mapView : UIView!
   
   /*
    TODO: Add limit to user rates and been here. For example, user can only rate restaurant 1 time and be in restaurant 1 time also. 
@@ -34,6 +35,9 @@ class RestaurantViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    beenThere.addTarget(self, action: #selector(yo), for: .touchUpInside)
+    
+    createFormatter()
     
     ratingLabel.layer.masksToBounds = true
     ratingLabel.layer.cornerRadius = 5
@@ -54,7 +58,7 @@ class RestaurantViewController: UIViewController {
     restaurantAdress.text = restaurant.adressString
     businessHours.attributedText = getAtributedStringFrom(restaurant)
     if restaurant.rating != 0.0 {
-      ratingLabel.text = String(restaurant.rating)
+      ratingLabel.text = formatter!.string(from: NSNumber(value: Double(restaurant.rating)))
     }
     
     setupBorderAround(button: beenThere)
@@ -73,7 +77,18 @@ class RestaurantViewController: UIViewController {
   }
   
   deinit {
-    print("we're out of heap")
+    print("\"\(restaurant.name)\" is out of heap")
+  }
+  
+  func yo() {
+    print(formatter?.string(from: NSNumber(value: Double(ratingLabel.text!)!)) ?? "-")
+  }
+  
+  var formatter: NumberFormatter?
+  private func createFormatter() {
+    formatter = NumberFormatter()
+    formatter!.numberStyle = .decimal
+    formatter!.maximumFractionDigits = 1
   }
   
   //MARK: Button Actions
@@ -131,10 +146,13 @@ class RestaurantViewController: UIViewController {
   @objc private func rated() {
     print("Rating is \(restaurantRating)")
     print("old:\t rating: \(restaurant.rating)\t voted: \(restaurant.voted)")
-    let voted = Double(restaurant.voted)
-    restaurant.rating = (restaurant.rating * voted + Double(restaurantRating)) / (voted + 1.0)
+    let voted = restaurant.voted + 1
+    let rating = (restaurant.rating * (Double(voted) - 1.0) + Double(restaurantRating)) / Double(voted)
+    restaurant.rating = rating
     restaurant.voted += 1
     print("new:\t rating: \(restaurant.rating)\t voted: \(restaurant.voted)")
+    Shared.sharedInstance.manager?.leaveRating(rating, withVotedNumber: voted, for: restaurant.id)
+    ratingLabel.text = formatter!.string(from: NSNumber(value: rating))
     
     hideRateView()
   }

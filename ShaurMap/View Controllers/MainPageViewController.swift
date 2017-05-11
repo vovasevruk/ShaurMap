@@ -1,6 +1,6 @@
-
 import UIKit
 import CoreLocation
+import SWRevealViewController
 
 class MainPageViewController: UIViewController, UIScrollViewDelegate {
   @IBOutlet weak var sales: UIButton!

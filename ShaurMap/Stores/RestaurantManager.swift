@@ -18,15 +18,21 @@ class RestaurantManager {
   
   func fetchFirstRestaurants(with amout: Int) {
     print("fetching first rests")
-    ref.queryLimited(toFirst: UInt(amout)).observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
+    ref.queryLimited(toFirst: UInt(amout)).observeSingleEvent(of: .value, with: { (snapshot) in
       self.delegate?.didReceive(restaurants: RestaurantBuilder.restaurantsFromJSON(with: snapshot.value as! NSArray))
       print("delegate method back")
     })
   }
-  
+
   func fetchAllRestaurants() {
-    ref.observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
+    ref.observe(.value, with: { (snapshot) in
       self.delegate?.didReceive(restaurants: RestaurantBuilder.restaurantsFromJSON(with: snapshot.value as! NSArray))
+      print("fetching all")
     })
+  }
+  
+  func leaveRating(_ rating: Double, withVotedNumber voted: Int, for id: Int) {
+    ref.child("\(id)").child("rating").setValue(String(rating))
+    ref.child("\(id)").child("voted").setValue(String(voted))
   }
 }

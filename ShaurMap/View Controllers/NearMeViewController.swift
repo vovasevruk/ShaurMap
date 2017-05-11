@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import SWRevealViewController
 
 class NearMeViewController: UIViewController {
   @IBOutlet weak var menuButton: UIBarButtonItem!
